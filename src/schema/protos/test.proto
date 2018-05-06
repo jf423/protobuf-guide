@@ -1,0 +1,23 @@
+/**
+ * Booking related messages.
+ *
+ * This file is really just an example. The data model is completely
+ * fictional.
+ */
+syntax = "proto3";
+
+package Ecommerce;
+
+// 產品
+message Product {
+    bool available = 1; // 是否上架（布林值）
+    string name = 2;    // 產品名稱（字串）
+    string desc = 3;    // 產品說明（字串）
+    float price = 4;    // 價格（浮點數）
+    repeated Item item = 5;
+}
+
+message Item {
+    string title = 1;
+    int32 number = 2;
+}
